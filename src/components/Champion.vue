@@ -18,6 +18,7 @@ const face =  new URL(props.data.images.face, import.meta.url).href;
          :alt="data.name"
          class="fighter"
          @mouseover="$emit('hoverEffectSound', data)"
+         @click="$emit('selectedChamp', data)"
         />
 
     </div>
@@ -27,7 +28,7 @@ const face =  new URL(props.data.images.face, import.meta.url).href;
 .fighter {
     border: 4px solid transparent;
     cursor: pointer;
-    width: 50px;
+    width: 150px;
 }
 .fighter:hover {
     border: 4px solid rgb(31, 165, 31);

@@ -1,13 +1,18 @@
-<script></script>
+<script setup>
+const props = defineProps({
+    fighter: Object,
+    required: true
+});
+</script>
 <template>
     <div class="selected_fighter">
-        <img src="../assets/images/fighters/scorpion/walking.webp" alt="">
+        <img :src="fighter.images.standby" alt="">
     </div>
 </template>
 <style>
 .selected_fighter {
     display: flex;
-    justify-content: center;
+    justify-content: star;
     align-items: center;
 }
 </style>

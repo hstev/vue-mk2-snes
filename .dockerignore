@@ -1,5 +1,4 @@
 node_modules
 Dockerfile
-package*.json
 README.md
 public
