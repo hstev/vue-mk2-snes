@@ -1,6 +1,7 @@
 <script setup>
 import Champion from '@/components/Champion.vue';
 import fighters from '@/assets/fightersMapper.js';
+const emit = defineEmits(['changeSeletedFighter'])
 
 const hoverEffectSound = document.createElement('audio');
 hoverEffectSound.src = 'src/audio/ui/selecting_fighter_sound.mp3';
@@ -8,7 +9,10 @@ hoverEffectSound.src = 'src/audio/ui/selecting_fighter_sound.mp3';
 const selectedChampSound = document.createElement('audio');
 selectedChampSound.src = 'src/audio/ui/selected_fighter.mp3';
 
+const shaokahnSaysFigtherName = document.createElement('audio');
+
 const playHoverEffectSound = (data) => {{
+    emit('changeSeletedFighter', data);
     hoverEffectSound.volume = 0.1;
     hoverEffectSound.currentTime = 0;
     hoverEffectSound.play();
@@ -22,7 +26,8 @@ const playSelectedChampSound = (data) => {
 
 const chooseFighter = (data) => {
     playSelectedChampSound();
-    console.log(data);
+    shaokahnSaysFigtherName.src = `src/audio/shaokahn/names/${data.key}.mp3`;
+    shaokahnSaysFigtherName.play();
 };
 
 </script>
@@ -45,7 +50,7 @@ const chooseFighter = (data) => {
     display: grid;
     grid-template-columns: auto auto auto auto;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     width: 100%;
     height: 100%;

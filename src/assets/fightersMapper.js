@@ -5,11 +5,13 @@ const fighters = [
         name: 'Liu Kang',
         images: {
             face: '../assets/images/fighters/liu_kang/face.webp',
-            standby: '../assets/images/fighters/liu_kang/standby.webp',
+            standby: 'src/assets/images/fighters/liu_kang/standby.webp',
             defeat: '../assets/images/fighters/liu_kang/defeat.webp',
             walking: '../assets/images/fighters/liu_kang/walking.webp',
         },
-        audios: {},
+        audios: {
+            selected: '../audio/shaokahn/liu_kang.mp3'
+        },
         active: true
     },
     {
@@ -17,11 +19,13 @@ const fighters = [
         name: 'Kung Lao',
         images: {
             face: '../assets/images/fighters/kung_lao/face.webp',
-            standby: '../assets/images/fighters/kung_lao/standby.webp',
+            standby: 'src/assets/images/fighters/kung_lao/standby.webp',
             defeat: '../assets/images/fighters/kung_lao/defeat.webp',
             walking: '../assets/images/fighters/kung_lao/walking.webp',
         },
-        audios: {},
+        audios: {
+            selected: '../audio/shaokahn/kung_lao.mp3'
+        },
         active: true
     },
     {
@@ -29,11 +33,13 @@ const fighters = [
         name: 'Jhonny Cage',
         images: {
             face: '../assets/images/fighters/cage/face.webp',
-            standby: '../assets/images/fighters/cage/standby.webp',
+            standby: 'src/assets/images/fighters/cage/standby.webp',
             defeat: '../assets/images/fighters/cage/defeat.webp',
             walking: '../assets/images/fighters/cage/walking.webp',
         },
-        audios: {},
+        audios: {
+            selected: '../audio/shaokahn/cage.mp3'
+        },
         active: true
     },
     {
@@ -41,11 +47,13 @@ const fighters = [
         name: 'Reptile',
         images: {
             face: '../assets/images/fighters/reptile/face.webp',
-            standby: '../assets/images/fighters/reptile/standby.webp',
+            standby: 'src/assets/images/fighters/reptile/standby.webp',
             defeat: '../assets/images/fighters/reptile/defeat.webp',
             walking: '../assets/images/fighters/reptile/walking.webp',
         },
-        audios: {},
+        audios: {
+            selected: '../audio/shaokahn/reptile.mp3'
+        },
         active: true
     },
     
@@ -55,11 +63,13 @@ const fighters = [
         name: 'Sub Zero',
         images: {
             face: '../assets/images/fighters/sub_zero/face.webp',
-            standby: '../assets/images/fighters/sub_zero/standby.webp',
+            standby: 'src/assets/images/fighters/sub_zero/standby.webp',
             defeat: '../assets/images/fighters/sub_zero/defeat.webp',
             walking: '../assets/images/fighters/sub_zero/walking.webp',
         },
-        audios: {},
+        audios: {
+            selected: '../audio/shaokahn/sub_zero.mp3'
+        },
         active: true
     },
     {
@@ -67,11 +77,13 @@ const fighters = [
         name: 'Shang Tsung',
         images: {
             face: '../assets/images/fighters/shang_tsung/face.webp',
-            standby: '../assets/images/fighters/shang_tsung/standby.webp',
+            standby: 'src/assets/images/fighters/shang_tsung/standby.webp',
             defeat: '../assets/images/fighters/shang_tsung/defeat.webp',
             walking: '../assets/images/fighters/shang_tsung/walking.webp',
         },
-        audios: {},
+        audios: {
+            selected: '../audio/shaokahn/shang_tsung.mp3'
+        },
         active: true
     },
     {
@@ -79,11 +91,13 @@ const fighters = [
         name: 'Kitana',
         images: {
             face: '../assets/images/fighters/kitana/face.webp',
-            standby: '../assets/images/fighters/kitana/standby.webp',
+            standby: 'src/assets/images/fighters/kitana/standby.webp',
             defeat: '../assets/images/fighters/kitana/defeat.webp',
             walking: '../assets/images/fighters/kitana/walking.webp',
         },
-        audios: {},
+        audios: {
+            selected: '../audio/shaokahn/kitana.mp3'
+        },
         active: true
     },
     {
@@ -91,11 +105,13 @@ const fighters = [
         name: 'Jax',
         images: {
             face: '../assets/images/fighters/jax/face.webp',
-            standby: '../assets/images/fighters/jax/standby.webp',
+            standby: 'src/assets/images/fighters/jax/standby.webp',
             defeat: '../assets/images/fighters/jax/defeat.webp',
             walking: '../assets/images/fighters/jax/walking.webp',
         },
-        audios: {},
+        audios: {
+            selected: '../audio/shaokahn/jax.mp3'
+        },
         active: true
     },
 
@@ -105,11 +121,13 @@ const fighters = [
         name: 'Mileena',
         images: {
             face: '../assets/images/fighters/mileena/face.webp',
-            standby: '../assets/images/fighters/mileena/standby.webp',
+            standby: 'src/assets/images/fighters/mileena/standby.webp',
             defeat: '../assets/images/fighters/mileena/defeat.webp',
             walking: '../assets/images/fighters/mileena/walking.webp',
         },
-        audios: {},
+        audios: {
+            selected: '../audio/shaokahn/mileena.mp3'
+        },
         active: true
     },
     {
@@ -117,11 +135,13 @@ const fighters = [
         name: 'Baraka',
         images: {
             face: '../assets/images/fighters/baraka/face.webp',
-            standby: '../assets/images/fighters/baraka/standby.webp',
+            standby: 'src/assets/images/fighters/baraka/standby.webp',
             defeat: '../assets/images/fighters/baraka/defeat.webp',
             walking: '../assets/images/fighters/baraka/walking.webp',
         },
-        audios: {},
+        audios: {
+            selected: '../audio/shaokahn/baraka.mp3'
+        },
         active: true
     },
     {
@@ -129,11 +149,13 @@ const fighters = [
         name: 'Scorpion',
         images: {
             face: '../assets/images/fighters/scorpion/face.webp',
-            standby: '../assets/images/fighters/scorpion/standby.webp',
+            standby: 'src/assets/images/fighters/scorpion/standby.webp',
             defeat: '../assets/images/fighters/scorpion/defeat.webp',
             walking: '../assets/images/fighters/scorpion/walking.webp',
         },
-        audios: {},
+        audios: {
+            selected: '../audio/shaokahn/scorpion.mp3'
+        },
         active: true
     },
     {
@@ -141,11 +163,13 @@ const fighters = [
         name: 'Raiden',
         images: {
             face: '../assets/images/fighters/raiden/face.webp',
-            standby: '../assets/images/fighters/raiden/standby.webp',
+            standby: 'src/assets/images/fighters/raiden/standby.webp',
             defeat: '../assets/images/fighters/raiden/defeat.webp',
             walking: '../assets/images/fighters/raiden/walking.webp',
         },
-        audios: {},
+        audios: {
+            selected: '../audio/shaokahn/raiden.mp3'
+        },
         active: true
     },
 ]
