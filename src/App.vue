@@ -11,6 +11,10 @@ import liu_kang_walking from '@/assets/images/fighters/liu_kang/walking.webp';
 import liu_kang_selected from '@/audio/shaokahn/liu_kang.mp3';
 
 const audio = document.createElement('audio');
+audio.src = backgroundMusic;
+audio.volume = 0.2;
+audio.loop = true;
+
 const sound = ref(true);
 
 let dataFighter = ref({
@@ -30,9 +34,6 @@ let dataFighter = ref({
 
 const playBackgroundMusic = () => {
   if (sound.value) {
-    audio.src = backgroundMusic;
-    audio.volume = 0.2;
-    audio.loop = true;
     audio.play();
   } else {
     audio.pause();
