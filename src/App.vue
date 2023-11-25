@@ -6,7 +6,7 @@ import backgroundMusic from '@/audio/ui/selecting_fighter_background.mp3';
 
 import liu_kang_face from '@/assets/images/fighters/liu_kang/face.webp';
 import liu_kang_standby from '@/assets/images/fighters/liu_kang/standby.webp';
-import liu_kang_selected from '@/audio/shaokahn/liu_kang.mp3';
+import liu_kang_selected from '@/audio/shaokahn/names/liu_kang.mp3';
 
 const audio = document.createElement('audio');
 audio.src = backgroundMusic;
