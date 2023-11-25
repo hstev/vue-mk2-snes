@@ -1,30 +1,33 @@
 <script setup>
 import { ref } from 'vue';
-import GridChampions from '@/components/GridChampions.vue';
-import SelectedChampion from '@/components/SelectedChampion.vue';
+import GridFighters from '@/components/GridFighters.vue';
+import SelectedFighter from '@/components/SelectedFighter.vue';
 import backgroundMusic from '@/audio/ui/selecting_fighter_background.mp3';
 
-// Valida si el navegador soporta el elemento audio
+import liu_kang_face from '@/assets/images/fighters/liu_kang/face.webp';
+import liu_kang_standby from '@/assets/images/fighters/liu_kang/standby.webp';
+import liu_kang_defeat from '@/assets/images/fighters/liu_kang/defeat.webp';
+import liu_kang_walking from '@/assets/images/fighters/liu_kang/walking.webp';
+import liu_kang_selected from '@/audio/shaokahn/liu_kang.mp3';
+
 const audio = document.createElement('audio');
 const sound = ref(true);
 
-// Selected fighter by default
 let dataFighter = ref({
         key: 'liu_kang',
         name: 'Liu Kang',
         images: {
-            face: '../assets/images/fighters/liu_kang/face.webp',
-            standby: 'src/assets/images/fighters/liu_kang/standby.webp',
-            defeat: '../assets/images/fighters/liu_kang/defeat.webp',
-            walking: '../assets/images/fighters/liu_kang/walking.webp',
+            face: liu_kang_face,
+            standby: liu_kang_standby,
+            defeat: liu_kang_defeat,
+            walking: liu_kang_walking,
         },
         audios: {
-            selected: '../audio/shaokahn/liu_kang.mp3'
+            selected: liu_kang_selected,
         },
         active: true
     });
 
-// reproduce el sonido una unica vez hasta detenerlo manualmente con click
 const playBackgroundMusic = () => {
   if (sound.value) {
     audio.src = backgroundMusic;
@@ -46,8 +49,8 @@ const changeFigther = (dataFighterSelecting) => {
 <template>
   <div class="screen">
     <span @click="playBackgroundMusic">{{ !sound ? '🔈' : '🔇' }}</span>
-    <SelectedChampion :fighter="dataFighter" />
-    <GridChampions @changeSeletedFighter="changeFigther"/>
+    <SelectedFighter :fighter="dataFighter" />
+    <GridFighters @changeSeletedFighter="changeFigther"/>
   </div>
 </template>
 

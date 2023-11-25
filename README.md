@@ -1,20 +1,28 @@
 # Mortal Kombat 2 SNES with Vue.js
 
-This is a project for educational purposes, it is a clone of the Mortal Kombat 2 SNES champion select screen, made with Vue.js and CSS.
+This is a project for educational purposes, it is a clone of the Mortal Kombat 2 SNES 'Choose your fighther' screen.
 
 
-## Docker installation (Vite)
+## Docker installation
 
 ```bash
-sudo docker build -t YOUR_CUSTOM_TAG .   
+$ docker build -t CONTAINER_NAME .   
 ```
 
 ```bash
-sudo docker run --rm -it YOUR_CUSTOM_TAG 
+$ docker run --rm -itd --rm -v ${pwd}/src:/app/src CONTAINER_NAME 
 ```
 
-The project will be serve with Vite and you have to use the Network IP of the container to access the project.
+```bash
+$ docker exec --it {container_id} sh
+```
 
-NOTE that the docker command don't include -p flag, because the port is already exposed in the Dockerfile.
+```bash
+npm run dev-docker 
+```
 
-Created by Harol Restrepo @hstev
+## Normal installation 
+
+```bash
+npm i && npm run dev 
+```

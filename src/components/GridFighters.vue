@@ -1,15 +1,18 @@
 <script setup>
-import Champion from '@/components/Champion.vue';
+import Fighter from '@/components/Fighter.vue';
 import fighters from '@/assets/fightersMapper.js';
+import audioSelectedFighter from '@/audio/ui/selected_fighter.mp3';
+import audioSelectingFighter from '@/audio/ui/selecting_fighter_sound.mp3';
+
 const emit = defineEmits(['changeSeletedFighter'])
 
 const hoverEffectSound = document.createElement('audio');
-hoverEffectSound.src = 'src/audio/ui/selecting_fighter_sound.mp3';
+hoverEffectSound.src = audioSelectingFighter;
 
-const selectedChampSound = document.createElement('audio');
-selectedChampSound.src = 'src/audio/ui/selected_fighter.mp3';
+const selectedFighter = document.createElement('audio');
+selectedFighter.src = audioSelectedFighter;
 
-const shaokahnSaysFigtherName = document.createElement('audio');
+const shaokahnSaysFighterName = document.createElement('audio');
 
 const playHoverEffectSound = (data) => {{
     emit('changeSeletedFighter', data);
@@ -18,35 +21,35 @@ const playHoverEffectSound = (data) => {{
     hoverEffectSound.play();
 }};
 
-const playSelectedChampSound = (data) => {
-    selectedChampSound.volume = 0.1;
-    selectedChampSound.currentTime = 0;
-    selectedChampSound.play();
+const playSelectedFighterSound = () => {
+    selectedFighter.volume = 0.1;
+    selectedFighter.currentTime = 0; 
+    selectedFighter.play();
 };
 
 const chooseFighter = (data) => {
-    playSelectedChampSound();
-    shaokahnSaysFigtherName.src = `src/audio/shaokahn/names/${data.key}.mp3`;
-    shaokahnSaysFigtherName.play();
+    playSelectedFighterSound();
+    shaokahnSaysFighterName.src = data.audios.selected;
+    shaokahnSaysFighterName.play();
 };
 
 </script>
 
 <template>
-    <div class="select__champion">
-        <Champion
+    <div class="select__fighter">
+        <Fighter
          v-for="(fighter, index) in fighters"
          :v-if="fighter.active"
          :key="index"
          :data="fighter"
          @hoverEffectSound="playHoverEffectSound"
-         @selectedChamp="chooseFighter"
+         @selectedFighter="chooseFighter"
         />
     </div>
 </template>
 
 <style scoped>
-.select__champion {
+.select__fighter {
     display: grid;
     grid-template-columns: auto auto auto auto;
     flex-wrap: wrap;

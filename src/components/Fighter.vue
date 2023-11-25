@@ -7,7 +7,6 @@ const props = defineProps({
     required: true
 });
 
-const face =  new URL(props.data.images.face, import.meta.url).href;
 
 </script>
 
@@ -15,11 +14,11 @@ const face =  new URL(props.data.images.face, import.meta.url).href;
     <div>
         <!-- Emit a function when mouse hover img -->
         <img
-         :src="face"
+         :src="data.images.face"
          :alt="data.name"
          class="fighter"
          @mouseover="$emit('hoverEffectSound', data)"
-         @click="$emit('selectedChamp', data)"
+         @click="$emit('selectedFighter', data)"
         />
 
     </div>
